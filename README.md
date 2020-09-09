@@ -1,1 +1,1 @@
-# js-env-template
+# javascript-patterns
