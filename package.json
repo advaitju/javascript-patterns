@@ -4,6 +4,7 @@
   "description": "",
   "main": ".eslintrc.js",
   "scripts": {
+		"update-peerdeps": "npx install-peerdeps -d eslint-config-airbnb",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
