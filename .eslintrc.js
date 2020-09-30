@@ -14,5 +14,9 @@ module.exports = {
 				trailingComma: 'es5',
 			},
 		],
+		'no-console': 'off',
+	},
+	env: {
+		browser: true,
 	},
 };
