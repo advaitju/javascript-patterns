@@ -1,0 +1,99 @@
+$main-box-shadow: 0 0 20px #d3d3d3;
+
+@mixin close-icon($font-size) {
+	&::after {
+		content: '\00d7';
+		display: block;
+		color: #bbb;
+		font-size: $font-size;
+		position: absolute;
+		top: 52%;
+		right: 0.875rem;
+		transform: translateY(-50%);
+		line-height: 1;
+		cursor: pointer;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+html, body {
+	background: #ddd;
+	color: #333;
+	font-family: monospace !important;
+	font-size: 16px;
+	height: 100%;
+}
+
+.todo-app-wrapper {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	padding: 10vw 1rem;
+}
+.todo-app {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.title {
+	color: #aaa;
+	font-size: 3rem;
+}
+.filter-wrapper {
+	margin-bottom: 4rem;
+	max-width: 80%;
+	width: 30rem;
+	position: relative;
+
+	@include close-icon(3.5rem);
+}
+.filter {
+	background-color: #f5f5f5;
+	border: 0;
+	border-bottom: 1px solid #fff;
+	border-radius: 5px;
+	box-shadow: $main-box-shadow;
+	font-family: monospace !important;
+	font-size: 1.875rem;
+	line-height: 1;
+	padding: 1.25rem 1.5rem 1rem;
+	width: 100%;
+}
+.todos-container {
+	background-color: #efefef;
+	border-bottom: 1px solid #fff;
+	border-radius: 10px;
+	box-shadow: $main-box-shadow;
+	padding: 0.2rem 0;
+	width: 80rem;
+	max-width: 80%;
+}
+
+.todo {
+	border-bottom: 1px solid #ddd;
+	font-size: 1.25rem;
+	padding: 1.25rem 2rem;
+	position: relative;
+	@include close-icon(2.875rem);
+
+	&:first-child {
+		// border-top: 1px solid #ddd;
+	}
+	&:last-child {
+		border: 0;
+	}
+
+	&__text {
+		line-height: 1;
+		margin: 0;
+	}
+}
